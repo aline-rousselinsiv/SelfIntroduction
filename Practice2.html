@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+    <title>Document</title>
+        <style>
+            body {
+            background-color: whitesmoke;
+        }
+        #container{
+            width: 100%;
+            height: 1500px;
+        }
+        #top {
+            background-color:rgb(235, 206, 240);
+            width: 100%;
+            height: 80px;
+            font-family:"Cal Sans", sans-serif;
+            font-size: x-large;
+            line-height: 80px;
+            justify-content: left;
+            padding-left:30px ;
+            margin-top: 0%;
+            align-items: center;
+            position: fixed;
+        }
+        i.fab {
+        font-size: 30px;      /* size of the icon */
+        color: rgb(197, 109, 212);       /* LinkedIn blue */
+        margin-right: 10px;   /* spacing */
+        transition: 0.3s;     /* smooth hover */
+        }
+        #icon-container{
+            float: right;
+            padding-right: 70px ;
+        }
+        h2 {
+            font-size: 50px;
+            text-align: center;
+            margin-top: 110px;
+            font-family: 'Sulphur Point', sans-serif;
+        }
+        .short-line {
+            width: 200px;          /* length of the line */
+            border: none;          /* remove default styles */
+            border-top: 2px solid rgb(197, 109, 212); /* thickness + color */
+            margin: 30px auto;     /* centers it horizontally */
+        }
+        #profile-pic{
+            width: 100px;
+            height: 100px;
+            border: 1px solid grey;
+            border-radius: 50%;
+            background-image: url("../media/catprofilepic.avif");
+            background-repeat: no-repeat;
+            background-size: 95px;
+            background-position: bottom;
+            margin: auto;
+        }
+        #introduction-text{
+            margin-top: 20px;
+            text-align: center;
+            font-family: 'Poiret', serif;
+        }
+        #introduction-text div{
+            margin:5px
+        }
+        #language-bar{
+            width: 100%;
+            height: 300px;
+            background-color: rgb(243, 232, 245);
+            margin-top: 50px;
+            font-family: 'Sulphur Point', sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            text-align: center;
+            padding-top: 50px;
+        }
+        #language-bar div{
+            margin-top: 20px;
+
+        }
+        div span{
+            display: inline-block;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        #hello-text span{
+            font-size: small;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="top">
+            Aline Rousselin-Siv
+            <a href="https://www.linkedin.com" target="_blank">
+            <span id="icon-container"><i class="fab fa-linkedin"></i></span>
+            </a>
+        </div>d
+        <h2>
+            - Welcome to my page -
+        </h2>
+        <hr class="short-line">
+        <div id="profile-pic"></div>
+        <div id="introduction-text">
+            <div>Hi, there ~</div>
+            <div>Welcome to my first self introduction page.</div>
+            <div>My name is Aline and this is my first HTML page project!</div>
+            <div>I hope you like it.</div>
+        </div>
+        <div id="language-bar">
+            LANGUAGES I SPEAK
+            <div>
+                <span class="fi fi-fr fis"></span>
+                <span class="fi fi-gb fis"></span>
+                <span class="fi fi-kr fis"></span>
+                <span class="fi fi-cn fis"></span>
+                <span class="fi fi-kh fis"></span>
+            </div>
+            <div id="hello-text">
+                <span>Bonjour!</span></div>
+                <span>Hello!</span>
+                <span>안녕하세요!</span>
+                <span>你好</span>
+                <span>សួស្តី!</span>
+            </div>
+        </div>   
+    </div>
+</body>
+</html>
