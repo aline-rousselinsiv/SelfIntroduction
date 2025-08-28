@@ -16,14 +16,14 @@
         <style>
             html {
                 scroll-behavior: smooth;
-                scroll-padding-top: 100px;
+                scroll-padding-top: 230px;
                 }
             body {
                 background-color: whitesmoke;
             }
             #container{
                 width: 100%;
-                height: 2000px;
+                height:300px;
             }
             header {
                 background-color:rgb(235, 206, 240);
@@ -71,6 +71,14 @@
                 background-size: 95px;
                 background-position: bottom;
                 margin: auto;
+                
+                overflow: hidden;   /* ensures image stays inside circle */
+                transition: width 0.2s, height 0.2s; /* smooth resize */
+            }
+            #profile-pic img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             #introduction-text{
                 margin-top: 20px;
@@ -177,17 +185,25 @@
                 font-family: 'Sulphur Point', sans-serif ;
                 color:  #a53faa;
             }
+            #clock{
+                text-align: center;
+                margin: 0 auto;
+            }
             .sub-menu a {
                 text-decoration: none;
                 color: black
             }
             #sections {
-                display: grid;
+                display: block;
+                align-content: space-around;
             }
-            #icons {
+            #icons{
                 text-align: center;
+            }
+            #insta, #github, #figma {
                 font-size: 30px;
                 color: #a53faa;
+                transition: font-size 0.4s; /*smoother transition instead of jumping*/
             }
             #icons a:visited{
                 color: #a53faa;
@@ -231,9 +247,12 @@
         <h2>
             Welcome to my page
         </h2>
+
         <div class="time"></div>
         <hr class="short-line">
-        <div id="profile-pic"></div>
+        <div id="profile-pic">
+            <img src="media/catprofilepic.avif">
+        </div>
         <div id="introduction-text">
             <div id="about-me">ABOUT ME</div>
             <div>Hi, there ~</div>
@@ -242,13 +261,14 @@
             <div>I am a complete beginner but I hope you like it.</div>
         </div>
         <div id="icons">
-            <a href="http://www.linkedin.com/in/aline-rousselin-siv" target="_blank"><span class="fa-brands fa-square-linkedin"></span></a>
-            <a href="https://github.com/aline-rousselinsiv" target="_blank"><span class="fa-brands fa-square-github"></span></a>
-            <a href="https://www.figma.com/design/KBSoVRO19996KZgp10pTz7/Test-Project?node-id=0-1&m=dev&t=Dbn9jJxOWt9H1q0k-1" target="_blank"><span class="fa-brands fa-square-figma"></span></a>
+            <a href="http://www.linkedin.com/in/aline-rousselin-siv" target="_blank"><span id="insta" class="fa-brands fa-square-linkedin"></span></a>
+            <a href="https://github.com/aline-rousselinsiv" target="_blank"><span id="github" class="fa-brands fa-square-github"></span></a>
+            <a href="https://www.figma.com/design/KBSoVRO19996KZgp10pTz7/Test-Project?node-id=0-1&m=dev&t=Dbn9jJxOWt9H1q0k-1" target="_blank"><span id="figma" class="fa-brands fa-square-figma"></span></a>
         </div>
         <div id="sections">
             <div id="experience" class="section">
                 <div>EXPERIENCE</div>
+                <div style="font-size: 20px; color: crimson;">/!\ Replace the inline-block by a <span style="font: bolder; text-decoration: underline;">grid or flex</span> so the photos can shrink accordingly the screen's size ! /!\</div>
                 <div id="exp-photos">
                     <div></div>
                     <div></div>
@@ -257,6 +277,7 @@
             </div>
             <div id="education" class="section">
                 EDUCATION
+                
             </div>
             <div id="language" class="section">
                 LANGUAGES
@@ -282,4 +303,43 @@
             + datetime.getSeconds(); 
         obj.innerHTML = time;
     }, 1000);
+
+    let profilePic = document.querySelector("#profile-pic");
+
+    profilePic.addEventListener("mouseover", ()=>{
+        profilePic.style.width = "150px";
+        profilePic.style.height = "150px";
+    });
+    profilePic.addEventListener("mouseout", ()=>{
+        profilePic.style.width = "100px";
+        profilePic.style.height = "100px";
+    });
+
+    let insta = document.querySelector("#insta");
+
+    insta.addEventListener("mouseover", ()=>{
+        insta.style.fontSize = "40px";
+    });
+    insta.addEventListener("mouseout", ()=>{
+        insta.style.fontSize = "30px";
+    });
+
+    let github = document.querySelector("#github");
+
+    github.addEventListener("mouseover", ()=>{
+        github.style.fontSize = "40px";
+    });
+    github.addEventListener("mouseout", ()=>{
+        github.style.fontSize = "30px";
+    });
+
+    let figma = document.querySelector("#figma");
+
+    figma.addEventListener("mouseover", ()=>{
+        figma.style.fontSize = "40px";
+    });
+    figma.addEventListener("mouseout", ()=>{
+        figma.style.fontSize = "30px";
+    });
+
 </script>
