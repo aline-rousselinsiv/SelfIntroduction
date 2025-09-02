@@ -288,9 +288,8 @@
                 font-size: larger;
                 background-color: thistle;
             }
-            th:hover {
-                color: white;
-                transition: color 0.3s ease-in-out;
+            td {
+                background-color: aliceblue;
             }
             td:hover {
                 background-color:#0f4573 ;
@@ -358,7 +357,7 @@
 
 <body>
     <div id="container">
-        <a href="#container"><img id="backToTop" src="../media/arrow48px.png"></a>
+        <a href="#container"><img id="backToTop" src="media/arrow48px.png"></a>
         <header id="top">
             Aline Rousselin-Siv
             <div class="top-menu">
@@ -378,7 +377,7 @@
         <div class="time"></div>
         <hr class="short-line">
         <div id="profile-pic">
-            <img src="../media/ProfilePic.png">
+            <img src="media/ProfilePic.png">
         </div>
         <div id="introduction-text">
             <div id="about-me">ABOUT ME</div>
@@ -497,7 +496,7 @@
         profilePic.style.width = "150px";
         profilePic.style.height = "150px";
     });
-    
+
     function fnFlag(){
         let flagfr = document.querySelector("#fr");
         let question = document.querySelector(".question");
