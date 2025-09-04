@@ -174,5 +174,11 @@
         profilePic.style.height = "150px";
     });
 
+    let cards = document.querySelectorAll(".lang-card");
 
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("flipped"); // add/remove the flipped class
+        });
+    });
 </script>
