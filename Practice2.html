@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
@@ -118,12 +118,27 @@
             </div>
             <div class="section-title">LANGUAGES</div>           
             <div id="language" class="section">
-                <div id="lang-wrapper">
-                    <div class="lang-card"></div>
-                    <div class="lang-card"></div>
-                    <div class="lang-card"></div>
-                    <div class="lang-card"></div>
-                    <div class="lang-card"></div>
+                <div class="lang-wrapper"> 
+                    <div class="lang-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="lang-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="lang-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="lang-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
+                    <div class="lang-card">
+                        <div class="front"></div>
+                        <div class="back"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -152,23 +167,12 @@
     profilePic.addEventListener("mouseover", ()=>{
         profilePic.style.width = "200px";
         profilePic.style.height = "200px";
+        
     });
     profilePic.addEventListener("mouseout", ()=>{
         profilePic.style.width = "150px";
         profilePic.style.height = "150px";
     });
 
- 
-    profilePic.addEventListener("click", ()=>{
-        // get the position of
-        let rect = this.getBoundingClientRect();
 
-        // Adjust to screen coordinates (page scroll included)
-        let left = rect.left + window.screenX;
-        let top = rect.top + window.screenY;
-        window.open("Popup.html", "popup", `width=200, height=200, left=${left}, top=${top}`);
-    })
-    
-    
 </script>
-
