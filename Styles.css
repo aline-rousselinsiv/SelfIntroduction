@@ -7,9 +7,10 @@
     }
     #container{
         width: 100%;
-        height:300px;
+        height: 300px;
     }
     header {
+        z-index: 1000;
         background-color:rgb(235, 206, 240, 0.8);
         backdrop-filter: blur(5px);
         width: 100%;
@@ -48,9 +49,12 @@
         border-top: 2px dotted rgb(197, 109, 212); /* thickness + color */
         margin: 30px auto;     /* centers it horizontally */
     }
+    #character {
+        position: relative;
+        width: fit-content; 
+        margin: 0 auto;
+    }
     #profile-pic{
-        /* display: flex;
-        align-content: center; */
         width: 150px;
         height: 150px;
         border: 1px solid grey;
@@ -62,10 +66,21 @@
         overflow: hidden;   /* ensures image stays inside circle */
         transition: width 0.2s, height 0.2s; /* smooth resize */
     }
+    #profile-pic:hover {
+        cursor: pointer;
+    }
     #profile-pic img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+    #click {
+        position: absolute;
+        right: -170px;
+        top: 40px;
+        /* z-index: 9000; */
+        font-family: 'Just Me Again Down Here', cursive;
+        font-size: 30px;
     }
     #introduction-text{
         margin-top: 20px;
@@ -105,6 +120,15 @@
         font-size: 40px;
         margin-top: 200px;
     }
+    #section-subtitle{
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        margin-top: 20px;
+        font-family: 'Just Me Again Down Here', cursive;
+        font-size: 30px;
+        font-weight: normal;
+    }
     #language-bar div{
         margin-top: 20px;
     }
@@ -130,7 +154,10 @@
         line-height: 60px;
         border-radius: 10px;
         box-shadow:  3px 2px 0 black;
-
+    }
+    .main-menu a {
+        text-decoration: none;
+        color: white;
     }
     .sub-menu{
         background-color: beige;
@@ -151,7 +178,6 @@
         line-height: 40px;
         padding: 13px 0px 5px;
         border-radius: 5px;
-
     }
     .main-menu:hover {
         background-color:#d07fde;
@@ -185,10 +211,10 @@
         text-decoration: none;
         color: black
     }
-    #sections {
+    /* #sections {
         display: block;
         align-content: space-around;
-    }
+    } */
     #language {
         margin-bottom: 0;
     }
@@ -326,16 +352,18 @@
         position: absolute;
         bottom: 10px;
     }
-    .lang-wrapper { /*container*/
-        display: flex;                
-        justify-content: center;      
-        align-items: flex-start;      
-        flex-wrap: nowrap;            /* no wrapping */
+    .lang-wrapper { /*container*/  
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* horizontal scroll*/     
+        overflow-y: hidden;  /* no vertical scroll */     
+        justify-content: center;
+        align-items: center;      
         perspective: 1000px;          
         width: 100%;
         height: 400px;
-        margin: auto;
-        gap: 30px;                   
+        margin: auto;            
+        gap: 20px;
     }
     .lang-card { /*card */
         perspective: 1000px;
@@ -344,10 +372,11 @@
         position: relative;
         width: 150px;
         height: 200px;
+        flex: 0 0 150px; /* prevents my card from shrinking even with flex*/
         transform-style: preserve-3d;
         transition: 0.7s ease;
         border-radius: 10px;
-        margin-top: 130px;
+        margin-top: 80px;
         margin-right: 30px;
     }
     .lang-card.flipped{
@@ -355,6 +384,9 @@
     }
     .front {
         position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
@@ -363,7 +395,14 @@
         transform: rotateY(0deg);
         border-radius: 10px;
         box-shadow: 0px 3px 12px -2px grey;
-
+        text-align: center;
+        font-size: 10px;
+    }
+    .front img {
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+        border: none;
     }
     .back {
         position: absolute;
@@ -375,4 +414,74 @@
         transform: rotateY(180deg);
         border-radius: 10px;
         box-shadow: 0px 3px 12px -2px grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Shadows Into Light', cursive;
+        display: flex;
+        flex-direction: column;
     }
+     .front:hover, .back:hover{
+        cursor: pointer;
+    }
+    .lang-star{
+        font-size: small;
+        margin: 0;
+    }
+
+    /*Media Query*/
+     @media screen and (max-width : 768px){
+        table, tr, th, td {
+        border: 1px solid grey;
+        width: 600px;
+        height: 100px;
+        margin: 60px auto;
+        font-size: large;
+        border-collapse: collapse;
+        }
+        table{
+            box-shadow: 1px 1px 4px -1px;
+        }
+        th {
+            font-weight: bold;
+            font-size: larger;
+            background-color: thistle;
+        }
+        td {
+            background-color: aliceblue;
+            font-size: 17px;
+        }
+        td:hover {
+            background-color:#0f4573 ;
+            color: white;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+        .lang-wrapper { /*container*/
+            display: flex;    
+            flex-wrap: nowrap;  
+            overflow-x: scroll;
+            justify-content: center;      
+            align-items: flex-start;      
+            perspective: 1000px;          
+            width: 100%;
+            height: 350px;
+            margin: auto;
+            gap: 2px;                   
+        }
+        .lang-card { /*card */
+            perspective: 1000px;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            width: 120px;
+            height: 160px;
+            flex: 0 0 auto; /* prevents my card from shrinking even with flex*/
+            transform-style: preserve-3d;
+            transition: 0.7s ease;
+            border-radius: 10px;
+            margin-top: 120px;
+            margin-right: 15px;
+        }
+     }
