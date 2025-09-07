@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Shadows+Into+Light&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poiret+One&family=Shadows+Into+Light&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
     <script src="https://kit.fontawesome.com/1b9ece4c13.js" crossorigin="anonymous"></script>
     <title>Document</title>
@@ -22,7 +22,9 @@
         <header id="top">
             Aline Rousselin-Siv
             <div class="top-menu">
-                <div class="main-menu">MENU</div>
+                <div class="main-menu">
+                    <a href="#container">MENU</a>
+                </div>
                 <div class="sub-menu">
                     <a href="#profile-pic">ABOUT ME</a>
                     <a href="#education">EDUCATION</a>
@@ -37,8 +39,11 @@
         <hr class="short-line">
         <div class="time"></div>
         <hr class="short-line">
-        <div id="profile-pic">
-            <img src="media/ProfilePic.png">
+        <div id="character">
+            <div id="profile-pic">
+                <img onclick="fnPopup()" src="media/ProfilePic.png">
+            </div>
+            <div id="click"> << Click on me !</div>
         </div>
         <div id="introduction-text">
             <div id="about-me">ABOUT ME</div>
@@ -118,26 +123,87 @@
             </div>
             <div class="section-title">LANGUAGES</div>           
             <div id="language" class="section">
+                <div id="section-subtitle">Click on the cards to see what language I speak !</div>
                 <div class="lang-wrapper"> 
                     <div class="lang-card">
-                        <div class="front"></div>
-                        <div class="back"></div>
+                            <div class="front">
+                                <div><img src="media/baguette.webp"></div>
+                            </div>
+                            <div class="back">
+                                <div><span class="fi fi-fr fis"></span></div>
+                                <div>French</div>
+                                <div>
+                                    <span class="lang-star fa-solid fa-star"></span>
+                                    <span class="lang-star fa-solid fa-star"></span>
+                                    <span class="lang-star fa-solid fa-star"></span>
+                                    <span class="lang-star fa-solid fa-star"></span>
+                                    <span class="lang-star fa-solid fa-star"></span>
+                                </div>
+                            </div>
                     </div>
                     <div class="lang-card">
-                        <div class="front"></div>
-                        <div class="back"></div>
+                        <div class="front">
+                            <div><img src="media/cola.jpg"></div>
+                        </div>
+                        <div class="back">
+                            <div><span class="fi fi-us fis"></span></div>
+                            <div>English</div>
+                            <div>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star-half-stroke"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="lang-card">
-                        <div class="front"></div>
-                        <div class="back"></div>
+                        <div class="front">
+                            <div><img src="media/soju.png"></div>
+                        </div>
+                        <div class="back">
+                            <div><span class="fi fi-kr fis"></span></div>
+                            <div>Korean</div>
+                            <div>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="lang-card">
-                        <div class="front"></div>
-                        <div class="back"></div>
+                        <div class="front">
+                            <div><img src="media/dumplings.webp"></div>
+                        </div>
+                        <div class="back">
+                            <div><span class="fi fi-cn fis"></span></div>
+                            <div>Chinese</div>
+                            <div>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="lang-card">
-                        <div class="front"></div>
-                        <div class="back"></div>
+                        <div class="front">
+                            <div><img src="media/mango.jpg"></div>
+                        </div>
+                        <div class="back">
+                            <div><span class="fi fi-kh fis"></span></div>
+                            <div>Cambodian</div>
+                            <div>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-solid fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                                <span class="lang-star fa-regular fa-star"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,11 +240,39 @@
         profilePic.style.height = "150px";
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
     let cards = document.querySelectorAll(".lang-card");
 
+    // Flip a card when clicked
     cards.forEach(card => {
-        card.addEventListener("click", () => {
-            card.classList.toggle("flipped"); // add/remove the flipped class
+        card.addEventListener("click", (e) => {
+        e.stopPropagation();  // prevent "outside click" from firing
+        card.classList.toggle("flipped");
         });
     });
+
+  // Reset ALL cards to front if clicking anywhere else
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".lang-card")) {
+        cards.forEach(card => card.classList.remove("flipped"));
+        }
+    }, { capture: true }); // capture ensures this runs reliably
+    });
+
+    function fnPopup() {
+    let profilePic = document.getElementById("profile-pic");
+    let rect = profilePic.getBoundingClientRect();
+    // gives the image’s position in the viewport
+
+    // Get image position relative to the screen
+    let left = rect.left + window.screenX - 300; // right edge of image
+    let top = rect.top + window.screenY;    // top edge of image
+
+    // Open popup next to the profile picture
+    window.open(
+        "Popup.html",
+        "popup",
+        `width=220,height=220,left=${left},top=${top}`
+    );
+    }
 </script>
