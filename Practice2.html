@@ -20,7 +20,7 @@
     <div id="container">
         <a href="#container"><img id="backToTop" src="media/arrow48px.png"></a>
         <header id="top">
-            Aline Rousselin-Siv
+            <span onclick="fnEmail()" id="full-name">Aline Rousselin-Siv</span> 
             <div class="top-menu">
                 <div class="main-menu">
                     <a href="#container">MENU</a>
@@ -272,7 +272,11 @@
     window.open(
         "Popup.html",
         "popup",
-        `width=220,height=220,left=${left},top=${top}`
+        `width=250,height=250,left=${left},top=${top}`
     );
+    }
+
+    function fnEmail(){
+        alert("You can contact me at aline.rousselinsiv@gmail.com !");
     }
 </script>
