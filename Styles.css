@@ -3,7 +3,7 @@
         scroll-padding-top: 200px;
         }
     body {
-        background-color: whitesmoke;
+        background-color: white;
     }
     #container{
         width: 100%;
@@ -25,6 +25,15 @@
         align-items: center;
         position: fixed;
         box-shadow: 1px 0px 3px 1px gray;
+    }
+    #full-name {
+        color: black;
+    }
+    #full-name:hover {
+        color: aliceblue;
+        text-shadow: 2px 2px grey;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
     }
     i.fab {
         font-size: 30px;     
@@ -485,3 +494,4 @@
             margin-right: 15px;
         }
      }
+
