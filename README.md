@@ -1,5 +1,4 @@
 # First Front-End Project
-***
 ## Project
 This is my very first introduction page, entirely built on HTML, CSS and Javascript.
 The goal of this assignment was to apply basic knowledge of CSS that was learned during a 1-week period.
@@ -11,3 +10,4 @@ The goal of this assignment was to apply basic knowledge of CSS that was learned
 You can click on the link below !  
 https://aline-rousselinsiv.github.io/SelfIntroduction/Practice2.html
 ## Overview
+<img src="https://raw.githubusercontent.com/aline-rousselinsiv/vue_express/main/illustrations/projectsList.png" width="400">
