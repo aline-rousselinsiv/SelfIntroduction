@@ -10,6 +10,7 @@ The goal of this assignment was to apply basic knowledge of CSS that was learned
 You can click on the link below !  
 https://aline-rousselinsiv.github.io/SelfIntroduction/Practice2.html
 ## Overview
-<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/blob/main/illustrations/top.png" width="400">  
-<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/blob/main/illustrations/cards.png" width="400">  
-<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/blob/main/illustrations/cards-flip.png" width="400">
+<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/main/illustrations/top.png" width="400">  
+<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/main/illustrations/cards.png" width="400">  
+<img src="https://raw.githubusercontent.com/aline-rousselinsiv/SelfIntroduction/main/illustrations/cards-flip.png" width="400">
+
